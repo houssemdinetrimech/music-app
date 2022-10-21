@@ -14,12 +14,12 @@ const Language = require("./routes/api/language");
 const app = express();
 app.use(cors());
 app.use(compression());
-app.use(express.json());
+
 // app.use(bodyParser.urlencoded({ extended: true }));
 // app.use(bodyParser.json());
 
 //DB connection
-const db = 'mongodb://localhost:27017';
+const db = 'mongodb://127.0.0.1:27017';
 //const { normalizeStyle } = require("admin-bro");
 
 mongoose
@@ -35,7 +35,7 @@ app.use("/api/artist", Artist);
 app.use("/api/album", Album);
 app.use("/api/song", Song);
 app.use("/api/language", Language);
-
+app.use(express.json());
 //For error
 // app.use(async (req, res, next) => {
 //   // const error = new Error("Not found");
