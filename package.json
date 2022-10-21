@@ -4,8 +4,8 @@
   "description": "online music player",
   "main": "server.js",
   "engines": {
-    "node": "18.7.0",
-    "npm": "8.19.2"
+    "node": "18.7.0"
+   
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
